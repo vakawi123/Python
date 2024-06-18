@@ -1,0 +1,17 @@
+{% include "navbar.html" %}
+{% extends "base.html" %}
+
+{% block content %}
+        {% for product in new_products %}
+            <div class = "col">
+                <div class = "card">
+                    <div class = "card-body">
+                        <h5 class="card-title"> {{ product["name"] }}</h5>
+                        <p class="card-text"> {{ product["price"]}} </p>
+                        <a class="btn btn-danger" href="/delete_product/{{ product['id'] }}">delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+{% endblock %}

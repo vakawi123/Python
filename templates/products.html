@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% include "navbar.html" %}
+
+
+{% block content %}
+    <div class = "container bg-white h-100">
+        <form method="POST" class="p-5">
+            {{ form.hidden_tag()}}
+            <div class="row">
+                {{ form.name(class = "form-control my-2", placeholder=form.name.label.text)}}
+            </div>
+            <div class="row">
+                {{ form.name(class = "form-control my-2", placeholder=form.country.label.text)}}
+            </div>
+            <div>
+                {{form.price(class="form-control my-2", placeholder=form.price.label.text) }}
+            </div>
+            <div class="row">
+                {{ form.add(class = "btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
